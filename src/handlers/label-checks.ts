@@ -1,4 +1,4 @@
-import { AssistivePricingSettings } from "../types/plugin-input";
+import { AssistivePricingSettings } from "../types/plugin-input.ts"; // Add .ts extension
 
 type Labels = AssistivePricingSettings["labels"]["priority" | "time"];
 

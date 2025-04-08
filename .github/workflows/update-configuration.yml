@@ -11,10 +11,16 @@ jobs:
     permissions: write-all
 
     steps:
-      - uses: ubiquity-os/action-deploy-plugin@main
+      - uses: denoland/setup-deno@v2
         with:
-          treatAsEsm: true
-          sourcemap: false
-        env:
-          APP_ID: ${{ secrets.APP_ID }}
-          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+          deno-version: v2.x
+      - run: |
+          deno task bundle
+        shell: bash
+#      - uses: ubiquity-os/action-deploy-plugin@main
+#        with:
+#          treatAsEsm: true
+#          sourcemap: false
+#        env:
+#          APP_ID: ${{ secrets.APP_ID }}
+#          APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}

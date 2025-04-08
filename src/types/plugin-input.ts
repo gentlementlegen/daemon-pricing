@@ -1,4 +1,4 @@
-import { StaticDecode, Type as T } from "@sinclair/typebox";
+import { StaticDecode, Type as T } from "npm:@sinclair/typebox@0.34.3"; // Add npm: and version specifier
 
 export const pluginSettingsSchema = T.Object(
   {

@@ -1,5 +1,5 @@
-import { Context } from "../types/context";
-import { isPushEvent } from "../types/typeguards";
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { isPushEvent } from "../types/typeguards.ts"; // Add .ts extension
 
 export async function getLabelsChanges(context: Context) {
   if (!isPushEvent(context)) {

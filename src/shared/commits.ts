@@ -1,5 +1,5 @@
-import { COMMIT_MESSAGE } from "../types/constants";
-import { Context } from "../types/context";
+import { COMMIT_MESSAGE } from "../types/constants.ts"; // Add .ts extension
+import { Context } from "../types/context.ts"; // Add .ts extension
 
 export async function pushEmptyCommit(context: Context) {
   const { octokit, payload, logger } = context;

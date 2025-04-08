@@ -1,12 +1,12 @@
-import { addLabelToIssue, clearAllPriceLabelsOnIssue, createLabel, listLabelsForRepo, removeLabelFromIssue } from "../shared/label";
-import { labelAccessPermissionsCheck } from "../shared/permissions";
-import { Label, UserType } from "../types/github";
-import { getPrice } from "../shared/pricing";
-import { handleParentIssue, isParentIssue, sortLabelsByValue } from "./handle-parent-issue";
-import { AssistivePricingSettings } from "../types/plugin-input";
-import { isIssueLabelEvent } from "../types/typeguards";
-import { Context } from "../types/context";
-import { extractLabelPattern } from "./label-checks";
+import { addLabelToIssue, clearAllPriceLabelsOnIssue, createLabel, listLabelsForRepo, removeLabelFromIssue } from "../shared/label.ts"; // Add .ts extension
+import { labelAccessPermissionsCheck } from "../shared/permissions.ts"; // Add .ts extension
+import { getPrice } from "../shared/pricing.ts"; // Add .ts extension
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { Label, UserType } from "../types/github.ts"; // Add .ts extension
+import { AssistivePricingSettings } from "../types/plugin-input.ts"; // Add .ts extension
+import { isIssueLabelEvent } from "../types/typeguards.ts"; // Add .ts extension
+import { handleParentIssue, isParentIssue, sortLabelsByValue } from "./handle-parent-issue.ts"; // Add .ts extension
+import { extractLabelPattern } from "./label-checks.ts"; // Add .ts extension
 
 export async function onLabelChangeSetPricing(context: Context): Promise<void> {
   if (!isIssueLabelEvent(context)) {

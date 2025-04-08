@@ -1,14 +1,14 @@
-import { CONFIG_ORG_REPO } from "@ubiquity-os/plugin-sdk/constants";
-import { pushEmptyCommit } from "../shared/commits";
-import { isUserAdminOrBillingManager, listOrgRepos, listRepoIssues } from "../shared/issue";
-import { COMMIT_MESSAGE } from "../types/constants";
-import { Context } from "../types/context";
-import { Label } from "../types/github";
-import { isPushEvent } from "../types/typeguards";
-import { isConfigModified } from "./check-modified-base-rate";
-import { getLabelsChanges } from "./get-label-changes";
-import { setPriceLabel } from "./pricing-label";
-import { getPriceLabels, syncPriceLabelsToConfig } from "./sync-labels-to-config";
+import { CONFIG_ORG_REPO } from "npm:@ubiquity-os/plugin-sdk@^3.0.0/constants"; // Assuming this subpath works with npm:
+import { pushEmptyCommit } from "../shared/commits.ts"; // Add .ts extension
+import { isUserAdminOrBillingManager, listOrgRepos, listRepoIssues } from "../shared/issue.ts"; // Add .ts extension
+import { COMMIT_MESSAGE } from "../types/constants.ts"; // Add .ts extension
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { Label } from "../types/github.ts"; // Add .ts extension
+import { isPushEvent } from "../types/typeguards.ts"; // Add .ts extension
+import { isConfigModified } from "./check-modified-base-rate.ts"; // Add .ts extension
+import { getLabelsChanges } from "./get-label-changes.ts"; // Add .ts extension
+import { setPriceLabel } from "./pricing-label.ts"; // Add .ts extension
+import { getPriceLabels, syncPriceLabelsToConfig } from "./sync-labels-to-config.ts"; // Add .ts extension
 
 type Repositories = Awaited<ReturnType<typeof listOrgRepos>>;
 

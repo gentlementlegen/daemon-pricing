@@ -1,5 +1,5 @@
-import { StaticDecode, Type as T } from "@sinclair/typebox";
-import { LOG_LEVEL } from "@ubiquity-os/ubiquity-os-logger";
+import { StaticDecode, Type as T } from "npm:@sinclair/typebox@0.34.3"; // Add npm: and version specifier
+import { LOG_LEVEL } from "npm:@ubiquity-os/ubiquity-os-logger@^1.4.0"; // Add npm: and version specifier
 
 export const envSchema = T.Object({
   LOG_LEVEL: T.Optional(T.Enum(LOG_LEVEL)),

@@ -1,19 +1,19 @@
-import { globalLabelUpdate } from "./handlers/global-config-update";
-import { onLabelChangeSetPricing } from "./handlers/pricing-label";
-import { syncPriceLabelsToConfig } from "./handlers/sync-labels-to-config";
-import { Context } from "./types/context";
-import { isIssueLabelEvent } from "./types/typeguards";
+import { globalLabelUpdate } from "./handlers/global-config-update.ts";
+import { onLabelChangeSetPricing } from "./handlers/pricing-label.ts";
+import { syncPriceLabelsToConfig } from "./handlers/sync-labels-to-config.ts";
+import { Context } from "./types/context.ts";
+import { isIssueLabelEvent } from "./types/typeguards.ts";
 
 export function isLocalEnvironment() {
-  return process.env.NODE_ENV === "local";
+  return Deno.env.get("NODE_ENV") === "local";
 }
 
 export function isGithubOrLocalEnvironment() {
-  return isLocalEnvironment() || !!process.env.GITHUB_ACTIONS;
+  return isLocalEnvironment() || !!Deno.env.get("GITHUB_ACTIONS");
 }
 
 export function isWorkerOrLocalEnvironment() {
-  return isLocalEnvironment() || !process.env.GITHUB_ACTIONS;
+  return isLocalEnvironment() || !Deno.env.get("GITHUB_ACTIONS");
 }
 
 export async function run(context: Context) {

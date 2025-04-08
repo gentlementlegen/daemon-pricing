@@ -1,6 +1,6 @@
-import { Context as PluginContext } from "@ubiquity-os/plugin-sdk";
-import { Env } from "./env";
-import { AssistivePricingSettings } from "./plugin-input";
+import { Context as PluginContext } from "npm:@ubiquity-os/plugin-sdk@^3.0.0"; // Add npm: and version specifier
+import { Env } from "./env.ts"; // Add .ts extension
+import { AssistivePricingSettings } from "./plugin-input.ts"; // Add .ts extension
 
 export type SupportedEvents =
   | "repository.created"

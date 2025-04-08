@@ -1,7 +1,7 @@
-import { CONFIG_FULL_PATH, DEV_CONFIG_FULL_PATH } from "@ubiquity-os/plugin-sdk/constants";
-import { Context } from "../types/context";
-import { isPushEvent } from "../types/typeguards";
-import { getCommitChanges } from "./get-commit-changes";
+import { CONFIG_FULL_PATH, DEV_CONFIG_FULL_PATH } from "npm:@ubiquity-os/plugin-sdk@^3.0.0/constants"; // Assuming this subpath works with npm:
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { isPushEvent } from "../types/typeguards.ts"; // Add .ts extension
+import { getCommitChanges } from "./get-commit-changes.ts"; // Add .ts extension
 
 export const ZERO_SHA = "0000000000000000000000000000000000000000";
 const BASE_RATE_FILES = [DEV_CONFIG_FULL_PATH, CONFIG_FULL_PATH];

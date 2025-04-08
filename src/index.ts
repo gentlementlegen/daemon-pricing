@@ -1,9 +1,9 @@
-import { createActionsPlugin } from "@ubiquity-os/plugin-sdk";
-import { LOG_LEVEL, LogLevel } from "@ubiquity-os/ubiquity-os-logger";
-import { run } from "./run";
-import { SupportedEvents } from "./types/context";
-import { Env, envSchema } from "./types/env";
-import { AssistivePricingSettings, pluginSettingsSchema } from "./types/plugin-input";
+import { createActionsPlugin } from "npm:@ubiquity-os/plugin-sdk";
+import { LOG_LEVEL, LogLevel } from "npm:@ubiquity-os/ubiquity-os-logger";
+import { run } from "./run.ts";
+import { SupportedEvents } from "./types/context.ts";
+import { Env, envSchema } from "./types/env.ts";
+import { AssistivePricingSettings, pluginSettingsSchema } from "./types/plugin-input.ts";
 
 createActionsPlugin<AssistivePricingSettings, Env, null, SupportedEvents>(
   (context) => {

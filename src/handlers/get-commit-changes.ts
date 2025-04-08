@@ -1,4 +1,4 @@
-import { Context } from "../types/context";
+import { Context } from "../types/context.ts"; // Add .ts extension
 
 // Collects all the modified and added files from the commits.
 export function getCommitChanges(commits: Context<"push">["payload"]["commits"]): string[] {

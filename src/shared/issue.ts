@@ -1,4 +1,4 @@
-import { Context } from "../types/context";
+import { Context } from "../types/context.ts"; // Add .ts extension
 
 async function checkIfIsAdmin(context: Context, username: string) {
   const owner = context.payload.repository.owner?.login;

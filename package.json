@@ -5,12 +5,13 @@
   "main": "build/index.ts",
   "author": "Ubiquity DAO",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=20.10.0"
   },
   "scripts": {
-    "worker": "wrangler dev --env dev --port 4001",
+    "start": "deno run --allow-net --allow-env --allow-read src/main.ts",
+    "dev": "deno run --watch --allow-net --allow-env --allow-read src/main.ts",
     "format": "run-s format:lint format:prettier format:cspell",
     "format:lint": "eslint --fix .",
     "format:prettier": "prettier --write .",
@@ -18,8 +19,8 @@
     "knip": "knip --config .github/knip.ts",
     "knip-ci": "knip --no-exit-code --reporter json --config .github/knip.ts",
     "prepare": "husky install",
-    "test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest --setupFiles dotenv/config --coverage",
-    "run": "bun run --watch --no-clear-screen src/worker.ts"
+    "test": "echo \"Error: Test script needs migration to deno test\"",
+    "run": "deno run --watch --allow-net --allow-env --allow-read src/main.ts"
   },
   "keywords": [
     "typescript",
@@ -35,7 +36,6 @@
     "@ubiquity-os/plugin-sdk": "^3.0.0",
     "@ubiquity-os/ubiquity-os-logger": "^1.4.0",
     "decimal.js": "^10.4.3",
-    "dotenv": "^16.4.5",
     "hono": "^4.6.7"
   },
   "devDependencies": {
@@ -45,9 +45,7 @@
     "@cspell/dict-software-terms": "^4.1.15",
     "@cspell/dict-typescript": "^3.1.2",
     "@eslint/js": "^9.18.0",
-    "@jest/globals": "^29.7.0",
     "@mswjs/data": "0.16.1",
-    "@types/jest": "^29.5.14",
     "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
@@ -59,19 +57,12 @@
     "eslint-plugin-prettier": "^5.2.2",
     "eslint-plugin-sonarjs": "^3.0.1",
     "husky": "^9.0.11",
-    "jest": "^29.7.0",
-    "jest-junit": "16.0.0",
-    "jest-md-dashboard": "0.8.0",
     "knip": "^5.0.1",
     "lint-staged": "^15.2.2",
     "msw": "^2.7.0",
-    "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
-    "ts-jest": "^29.2.5",
-    "ts-node": "^10.9.2",
     "typescript": "5.6.2",
-    "typescript-eslint": "^8.20.0",
-    "wrangler": "^3.87.0"
+    "typescript-eslint": "^8.20.0"
   },
   "lint-staged": {
     "*.ts": [

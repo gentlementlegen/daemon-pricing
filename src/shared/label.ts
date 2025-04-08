@@ -1,5 +1,5 @@
-import { Label } from "../types/github";
-import { Context } from "../types/context";
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { Label } from "../types/github.ts"; // Add .ts extension
 
 // cspell:disable
 export const COLORS = { default: "ededed", price: "1f883d" };

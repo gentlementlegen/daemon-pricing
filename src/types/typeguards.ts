@@ -1,4 +1,4 @@
-import { Context } from "./context";
+import { Context } from "./context.ts"; // Add .ts extension
 
 export function isIssueLabelEvent(context: Context): context is Context & {
   payload: {

@@ -1,7 +1,7 @@
-import { COLORS, createLabel, listLabelsForRepo } from "../shared/label";
-import { calculateLabelValue, calculateTaskPrice } from "../shared/pricing";
-import { Context } from "../types/context";
-import { Label } from "../types/github";
+import { COLORS, createLabel, listLabelsForRepo } from "../shared/label.ts"; // Add .ts extension
+import { calculateLabelValue, calculateTaskPrice } from "../shared/pricing.ts"; // Add .ts extension
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { Label } from "../types/github.ts"; // Add .ts extension
 
 // This just checks all the labels in the config have been set in gh issue
 // If there's something missing, they will be added

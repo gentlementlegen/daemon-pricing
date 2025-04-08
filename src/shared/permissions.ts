@@ -1,8 +1,8 @@
-import { extractLabelPattern } from "../handlers/label-checks";
-import { Context } from "../types/context";
-import { UserType } from "../types/github";
-import { isIssueLabelEvent } from "../types/typeguards";
-import { isUserAdminOrBillingManager } from "./issue";
+import { extractLabelPattern } from "../handlers/label-checks.ts"; // Add .ts extension
+import { Context } from "../types/context.ts"; // Add .ts extension
+import { UserType } from "../types/github.ts"; // Add .ts extension
+import { isIssueLabelEvent } from "../types/typeguards.ts"; // Add .ts extension
+import { isUserAdminOrBillingManager } from "./issue.ts"; // Add .ts extension
 
 export async function labelAccessPermissionsCheck(context: Context) {
   if (!isIssueLabelEvent(context)) {

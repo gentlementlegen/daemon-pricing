@@ -5,6 +5,7 @@ import { SupportedEvents } from "./types/context.ts";
 import { Env, envSchema } from "./types/env.ts";
 import { AssistivePricingSettings, pluginSettingsSchema } from "./types/plugin-input.ts";
 
+// entry
 createActionsPlugin<AssistivePricingSettings, Env, null, SupportedEvents>(
   (context) => {
     return run(context);

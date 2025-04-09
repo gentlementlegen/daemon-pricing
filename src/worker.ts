@@ -1,8 +1,8 @@
 import { createAppAuth } from "https://esm.sh/@octokit/auth-app?dts";
 import { Octokit } from "https://esm.sh/@octokit/rest?dts";
-import { createPlugin } from "npm:@ubiquity-os/plugin-sdk@^3.0.0";
-import { Manifest } from "npm:@ubiquity-os/plugin-sdk@^3.0.0/manifest";
-import { customOctokit } from "npm:@ubiquity-os/plugin-sdk@^3.0.0/octokit";
+import { createPlugin } from "npm:@ubiquity-os/plugin-sdk@^3.1.4";
+import { Manifest } from "npm:@ubiquity-os/plugin-sdk@^3.1.4/manifest";
+import { customOctokit } from "npm:@ubiquity-os/plugin-sdk@^3.1.4/octokit";
 import { LOG_LEVEL, LogLevel } from "npm:@ubiquity-os/ubiquity-os-logger@^1.4.0";
 import type { ExecutionContext } from "npm:hono@^4.6.7";
 import manifest from "../manifest.json" with { type: "json" };
@@ -47,7 +47,7 @@ async function startAction(context: Context, inputs: Record<string, unknown>) {
 
   let authOctokit;
   // Use Deno.env.get()
-  if (!Deno.env.get("APP_ID") || !Deno.env.get("APP_PRIVATE_KEY")) {
+  if (!env.APP_ID || !env.APP_PRIVATE_KEY) {
     logger.debug("APP_ID or APP_PRIVATE_KEY are missing from the env, will use the default Octokit instance.");
     authOctokit = context.octokit;
   } else {

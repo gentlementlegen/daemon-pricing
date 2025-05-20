@@ -1,5 +1,67 @@
 # Changelog
 
+## [3.0.0](https://github.com/gentlementlegen/daemon-pricing/compare/v2.0.0...v3.0.0) (2025-05-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed command and Supabase related logic
+* removed command and Supabase related logic
+
+### Features
+
+* command interface ([cb47c59](https://github.com/gentlementlegen/daemon-pricing/commit/cb47c59d82399ac8989ba7f3eb2428463f6fe969))
+* global label change via config ([2be8b8e](https://github.com/gentlementlegen/daemon-pricing/commit/2be8b8e332421ba07e2da36e6f6e777da40f4943))
+* remove unused higher time and priority labels ([f0e2a21](https://github.com/gentlementlegen/daemon-pricing/commit/f0e2a21ecc00030e7a4d04ad46d552035aaa105d))
+* switch to Bun ([faec8fd](https://github.com/gentlementlegen/daemon-pricing/commit/faec8fdb733f2508392ac598c265a5a40793ef0e))
+* upgrade sdk ([e9c4714](https://github.com/gentlementlegen/daemon-pricing/commit/e9c4714a8719cdf0636502ba332a334967433eaf))
+* used ubiquity's knip-reporter ([42391a6](https://github.com/gentlementlegen/daemon-pricing/commit/42391a683a183f614ac63598cda333562bb85e72))
+* used ubiquity's knip-reporter ([ecc041e](https://github.com/gentlementlegen/daemon-pricing/commit/ecc041edd014fbfc0f933627c8a9f615fb70dc79))
+
+
+### Bug Fixes
+
+* add environment ([74bd780](https://github.com/gentlementlegen/daemon-pricing/commit/74bd780f45d74ab567df8d35b5abb3ac708fa5bf))
+* add environment ([79020ac](https://github.com/gentlementlegen/daemon-pricing/commit/79020ac75568c15194a4bece1593e57500ad8bcd))
+* added defaults for time and priority settings ([422a553](https://github.com/gentlementlegen/daemon-pricing/commit/422a553c26c5667afc7cbb57876748c543ef2b6a))
+* **config:** add descriptions to JSON schema properties ([f3bc570](https://github.com/gentlementlegen/daemon-pricing/commit/f3bc570beebccd520c6c9b69194a7dc26ab1a490))
+* eslint and prettier ([50df0a3](https://github.com/gentlementlegen/daemon-pricing/commit/50df0a3498be5d56a43ec18e51bd77b39ff3d309))
+* json schema ([cbdd62f](https://github.com/gentlementlegen/daemon-pricing/commit/cbdd62fc95232454634f41a038067c839d7704dc))
+* knip ([e12efd8](https://github.com/gentlementlegen/daemon-pricing/commit/e12efd8a709a59a924172d5fa364909d13a583be))
+* label generation ([305eed6](https://github.com/gentlementlegen/daemon-pricing/commit/305eed61201335f4fec9f5340b556a990b74a232))
+* labels are deleted from the targeted repo on regeneration ([c977b8b](https://github.com/gentlementlegen/daemon-pricing/commit/c977b8bb2a5eb549e77696aeb4ba576d76d16d4b))
+* labels do not get added twice to the label price list on update ([9e9ce5d](https://github.com/gentlementlegen/daemon-pricing/commit/9e9ce5dce7365f2b9818a4ee00a25de0aa45b5c8))
+* **logging:** handle missing label error gracefully ([23e02c7](https://github.com/gentlementlegen/daemon-pricing/commit/23e02c763d02048a479452d80f41aa4525f9ef0e))
+* long-running `syncPriceLabelToConfig` now only runs within GitHub Actions ([c3732a4](https://github.com/gentlementlegen/daemon-pricing/commit/c3732a4108ba05370f4bf197f6c8b6a642cdd137))
+* ncc build ([f9b1a54](https://github.com/gentlementlegen/daemon-pricing/commit/f9b1a54b1014554a063327bb53d88de0f0f5da05))
+* octokit auth ([c667d1f](https://github.com/gentlementlegen/daemon-pricing/commit/c667d1f209f319d5e394664a0914c058ef4b63b7))
+* only the incorrect labels get deleted on multiplier update ([e05e224](https://github.com/gentlementlegen/daemon-pricing/commit/e05e224c8cd5c4f27b0a11e58e6d37d58ac6f6f6))
+* pricing attempt on parent issue now displays a warning, or nothing is no price is set ([72c8912](https://github.com/gentlementlegen/daemon-pricing/commit/72c89125b01c6c111010b5afa80794a9614b32e3))
+* pricing parent issue ([fd23fd0](https://github.com/gentlementlegen/daemon-pricing/commit/fd23fd031d531dde732144e8b6142f240e82964e))
+* priority 0 is now properly handled and prices at zero ([3b5a250](https://github.com/gentlementlegen/daemon-pricing/commit/3b5a25059cb447541d3cd0d8b0a6017e2b58a654))
+* priority 0 is now properly handled and prices at zero ([2a7dfa8](https://github.com/gentlementlegen/daemon-pricing/commit/2a7dfa843e5050b341900655ad0bce981f230594))
+* remove allow command ([3e33352](https://github.com/gentlementlegen/daemon-pricing/commit/3e33352a1db89df5a404c7f90614b22011691bd3))
+* remove node ([9086444](https://github.com/gentlementlegen/daemon-pricing/commit/908644492e5ebbc77088fef5ea985a30d5dae1c6))
+* remove public-access-control ([16dff27](https://github.com/gentlementlegen/daemon-pricing/commit/16dff27429d4ccc399a13e30b197c07a4c6f7272))
+* remove ts expect error ([d6184bd](https://github.com/gentlementlegen/daemon-pricing/commit/d6184bdec0d1c9da5139dce82ffa4caa6859ed92))
+* remove unneeded ([74cba95](https://github.com/gentlementlegen/daemon-pricing/commit/74cba95e2accc2324948f98a1d3bc743e4f07e49))
+* removed `/allow` command ([2d14eac](https://github.com/gentlementlegen/daemon-pricing/commit/2d14eaca84c50c9808b3d62d96abf59cf35dee07))
+* removed `/allow` command ([7591c53](https://github.com/gentlementlegen/daemon-pricing/commit/7591c532a1c1b4de8efac32937c20d1fa1fde2a6))
+* removed `publicAccessControl` and replaced it with `shouldFundContributorClosedIssue` ([f250edb](https://github.com/gentlementlegen/daemon-pricing/commit/f250edb16d6785cf73dedfda858c178b1d37ce11))
+* removed collaborator feature ([3702e7e](https://github.com/gentlementlegen/daemon-pricing/commit/3702e7e6c4151b5e179e466a62b4ce1c16ddcf51))
+* removed command and Supabase related logic ([ecfa4fe](https://github.com/gentlementlegen/daemon-pricing/commit/ecfa4fe220aa208ebb7a79d63d4346564a915f96))
+* removed command and Supabase related logic ([df2d10d](https://github.com/gentlementlegen/daemon-pricing/commit/df2d10d0492455af8c5f5c130d1b197bebafb21c))
+* run label creation as an Action ([5e431c8](https://github.com/gentlementlegen/daemon-pricing/commit/5e431c832d59b7d49653a7b0fbad5bbbab904cce))
+* SDK usage ([eb5b16e](https://github.com/gentlementlegen/daemon-pricing/commit/eb5b16e08ce833aff6f3f9d8e18b39e173f3f9fa))
+* setup bun ([13d90cd](https://github.com/gentlementlegen/daemon-pricing/commit/13d90cdce1782eeb8a62c5c824e49b3ed36207f8))
+* support ESM and update configurations ([7ee03ee](https://github.com/gentlementlegen/daemon-pricing/commit/7ee03ee4a391d3e51708417c079fef561b0e013b))
+* support ESM and update configurations ([20dcee9](https://github.com/gentlementlegen/daemon-pricing/commit/20dcee96aa187f0dd8c7dee95a95a7e1fe98fa1e))
+* tests ([665d7b0](https://github.com/gentlementlegen/daemon-pricing/commit/665d7b0508df9d74d338c026c374801d21dc7cfe))
+* **tests:** update mocking technique and import structure ([67d96d5](https://github.com/gentlementlegen/daemon-pricing/commit/67d96d537bdd5b56517ebc509357dd3bc477c402))
+* the error message regarding the label set only appear on pricing attempts ([bc91264](https://github.com/gentlementlegen/daemon-pricing/commit/bc91264bed7fd25c883bec23739d265eec170d86))
+* trigger Action for base rate update ([17bbf31](https://github.com/gentlementlegen/daemon-pricing/commit/17bbf31b8a04fcd3679f152e0195e69e37186e6d))
+* update bun lock file format ([16f9dd5](https://github.com/gentlementlegen/daemon-pricing/commit/16f9dd5169261d52b3fb2a39b8becbf9deff88f0))
+
 ## 1.0.0 (2025-04-14)
 
 
